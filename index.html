@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <script>
+
+function getComputerChoice(computerChoice = Math.floor(Math.random() * (3 - 1 + 1)) + 1) {
+    if (computerChoice === 1) {
+        return "Rock";
+    } else if (computerChoice === 2) {
+        return "Paper";
+    } else if (computerChoice === 3) {
+        return "Scissors";
+    }
+}
+
+function singleRound(computerSelection, playerSelection) {
+    if (computerSelection === playerSelection) {
+        return "It's a Tie!"
+    } else if (computerSelection === "Paper" && playerSelection === "Rock") {
+        return "You lose! Paper beats Rock";
+    } else if (computerSelection === "Rock" && playerSelection === "Scissors") {
+        return "You lose! Rock beats Scissors";
+    } else if (computerSelection === "Scissors" && playerSelection === "Paper") {
+        return "You Lose! Scissors beats Paper";
+    } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+        return "You win! Paper beats Rock";
+    } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
+        return "You win! Rock beats Scissors";
+    } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+        return "You win! Scissors beats Paper";
+    }
+}
+
+// create function to play round of game that takes playerSelection and computerSelection and declares the winner 
+// should be case-insensitive and return the result
+
+// create function called game() to play a 5 round game and keep score
+
+  </script>
+</body>
+</html>
